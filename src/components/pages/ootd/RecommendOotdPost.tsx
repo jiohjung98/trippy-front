@@ -319,7 +319,7 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
                   />
                 )}
                 <div
-                    className="overflow-hidden w-[90%] mx-auto cursor-pointer sm-700:w-full"
+                    className="overflow-hidden cursor-pointer sm-700:w-full"
                     ref={scrollRef}
                     onMouseDown={handleDrag}
                     onScroll={handleScrollEnd} 
@@ -363,10 +363,10 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
            <Image
            src={SwiperLeftButton}
            alt="Previous"
-           width={60}
-           height={60}
+           width={40}
+           height={40}
            onClick={() => handleScrollOotd('left')}
-          className="absolute left-[-30px] top-[60%] transform -translate-y-1/2 z-10"
+          className="absolute left-[-22px] top-[61%] transform -translate-y-1/2 z-10"
          />
             )}
 
@@ -456,10 +456,10 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
                 <Image
                     src={SwiperRightButton}
                     alt="Next"
-                    width={60}
-                    height={60}
+                    width={40}
+                    height={40}
                     onClick={() => handleScrollOotd('right')}
-                    className="absolute right-[-30px] top-[60%] transform -translate-y-1/2 z-10"
+                    className="absolute right-[-px] top-[60%] transform -translate-y-1/2 z-10"
                 />
             )}
         </div>
