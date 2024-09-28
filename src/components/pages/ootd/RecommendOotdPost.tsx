@@ -366,7 +366,7 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
            width={40}
            height={40}
            onClick={() => handleScrollOotd('left')}
-          className="absolute left-[-22px] top-[62%] transform -translate-y-1/2 z-10"
+          className="absolute left-[-22px] top-[63.5%] transform -translate-y-1/2 z-10"
          />
             )}
 
@@ -441,7 +441,7 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
                             </SwiperSlide>
                         ))
                     ) : (
-                        <div className="h-full w-full mx-auto flex flex-col text-[2rem] text-black my-auto items-center justify-center font-medium py-[50px]">
+                        <div className="h-full w-full mx-auto flex flex-col text-[2rem] text-neutral-900 my-auto items-center justify-center font-medium py-[50px]">
                             <div className='flex flex-row'>
                                 <span className="text-[#FB3463]">{selectedInterest} </span>{"\u00A0"}관련 OOTD가 없어요!
                             </div>
@@ -459,7 +459,7 @@ const TagContainer: React.FC<TagContainerProps> = ({ item }) => {
                     width={40}
                     height={40}
                     onClick={() => handleScrollOotd('right')}
-                    className="absolute right-[-22px] top-[62%] transform -translate-y-1/2 z-10"
+                    className="absolute right-[-22px] top-[63.5%] transform -translate-y-1/2 z-10"
                 />
             )}
         </div>
