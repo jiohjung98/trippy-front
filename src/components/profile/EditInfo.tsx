@@ -18,7 +18,7 @@ import UpIcon from '../../../public/arrow_up.svg';
 import DownIcon from '../../../public/arrow_down.svg';
 import Swal from "sweetalert2";
 import { AxiosError } from "axios";
-import DefaultImage from '../../../public/defaultImage.svg';
+import DefaultImage from '../../../public/DefaultProfile.svg';
 import { getByteLength } from "@/constants/getByteLength";
 import OOtdDeleteImage from '../../../public/ootdImageDelete.svg';
 import Cropper, { Area } from "react-easy-crop";
@@ -92,8 +92,10 @@ const EditInfo = () => {
     try {
       const data = await getMyInfo(); 
       const profileImgData = data.profileImageUrl || null;
+      const blogImgData = data.blogTitleImgUrl || null;
       setInitialProfileImage(profileImgData); // 처음 유저 이미지를 저장
       setProfileImage(profileImgData); // 현재 표시될 이미지도 초기화
+      setBlogImage(blogImgData);
       // 나머지 유저 정보 초기화
       setNickName(data.nickName || '');
       setBlogName(data.blogName || '');
@@ -1063,7 +1065,7 @@ const EditInfo = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg w-[80%] max-w-[400px]">
             <h2 className="text-2xl font-bold mb-2 text-[#292929]">관심 분야 설정</h2>
-            <p className="text-sm text-[#6b6b6b] mb-4">관심분야를 2개 이상 설정해주세요</p>
+            <p className="text-sm text-[#6b6b6b] mb-4">관심분야를 2개 이상 선택해주세요. (최대 5개까지)</p>
             <div className="grid grid-cols-5 gap-2 justify-center">
               {blogInterests.map((interest, index) => (
                 <div
